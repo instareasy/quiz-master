@@ -1,3 +1,5 @@
-let baseUrl="http://localhost:8080";
+let loginUrl="http://localhost:8080";
 
-export default baseUrl;
+let adminUrl="http://localhost:8085";
+
+export { loginUrl, adminUrl } ;

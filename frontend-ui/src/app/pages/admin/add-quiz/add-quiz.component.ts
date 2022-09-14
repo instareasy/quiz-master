@@ -68,7 +68,7 @@ export class AddQuizComponent implements OnInit {
       },
       (error: any) => {
         console.log(error);
-        Swal.fire('Error !!', 'Server error', 'error');
+        Swal.fire('Error !!', 'Internal Server error: ' + error.name , 'error');
       });
   }
 

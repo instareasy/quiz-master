@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import baseUrl from './helper';
+import { adminUrl } from './helper';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,12 @@ export class CategoryService {
 
   // load all categories
   public categories() {
-    return this.http.get(`${baseUrl}/category/`);
+    return this.http.get(`${adminUrl}/category/`);
   }
 
   // add new category
   public addCategory(category: any) {
-    return this.http.post(`${baseUrl}/category/`, category);
+    return this.http.post(`${adminUrl}/category/`, category);
   }
 
 }

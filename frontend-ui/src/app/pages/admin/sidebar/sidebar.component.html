@@ -1,0 +1,34 @@
+<mat-card>
+      <mat-action-list>
+
+            <div mat-subheader>Menu</div>
+            <button mat-list-item routerLink="/admin">
+                  <mat-icon mat-list-icon>home</mat-icon>
+                  HOME
+            </button>
+            <button mat-list-item  routerLink="/admin/profile">
+                  <mat-icon mat-list-icon>account_circle</mat-icon>
+                  PROFILE
+            </button>
+            <button mat-list-item  routerLink="/admin/categories">
+                  <mat-icon mat-list-icon>add_shopping_cart</mat-icon>
+                  CATEGORIES
+            </button>
+            <button mat-list-item  routerLink="/admin/add-category">
+                  <mat-icon mat-list-icon>add_circle_outline</mat-icon>
+                  ADD CATEGORY
+            </button>
+            <button mat-list-item  routerLink="/admin/quizzes">
+                  <mat-icon mat-list-icon>quiz</mat-icon>
+                  QUIZZES
+            </button>
+            <button mat-list-item  routerLink="/admin/add-quiz">
+                  <mat-icon mat-list-icon>add_quiz</mat-icon>
+                  ADD QUIZZ
+            </button>
+            <button mat-list-item  (click)="logout()" *ngIf="isLoggedIn">
+                  <mat-icon mat-list-icon>logout</mat-icon>
+                  LOGOUT
+            </button>
+      </mat-action-list>
+</mat-card>

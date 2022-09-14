@@ -1,0 +1,16 @@
+.example-header-image {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnoBPDR1jyas_9h4lIR5pGX7tnfhoKA06PEQ&usqp=CAU");
+      background-size: cover;
+}
+
+.truncate {
+      display: block;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+
+mat-card {
+      background-color: blanchedalmond;
+}

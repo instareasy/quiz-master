@@ -1,0 +1,20 @@
+.result {
+      background-color: rgb(230, 206, 127);
+}
+
+.question {
+      background-color: palegreen;
+}
+
+.progress {
+      margin-top: 70px;
+      background-color: lemonchiffon;
+}
+
+.bootstrap-wrapper {
+      background-color: whitesmoke;
+}
+
+.title {
+      text-align: center;
+}

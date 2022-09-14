@@ -1,0 +1,29 @@
+.profile-image {
+      max-width: 150px;
+      max-height: 150px;
+      border: 2px solid rgb(211, 94, 94);
+      border-radius: 40%;
+}
+
+.table {
+      width: 100%;
+      border: 0.5px solid;
+      border-collapse: collapse;
+
+}
+
+.table tr td {
+      padding: 10px 50px;
+      border: 0.5px solid lightgreen;
+}
+
+tr:nth-child(even) {
+      background-color: lightpink;
+  }
+
+  tr:nth-child(odd) {
+      background-color: lightskyblue;
+  }
+mat-card {
+      background-color: lightgreen;
+}

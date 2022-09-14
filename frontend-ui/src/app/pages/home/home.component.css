@@ -1,0 +1,10 @@
+.backImage {
+      background-image: url('../../../assets/home2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+
+ul li {
+      font-size: medium;
+}

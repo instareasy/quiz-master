@@ -1,0 +1,18 @@
+.truncate {
+      display: block;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+
+.example-header-image {
+      background-image: url('../../../../assets/exam.png');
+      background-size: cover;
+}
+
+mat-card {
+      background-color: rgb(220, 224, 175);
+      box-shadow: brown 5px;
+      outline: chartreuse solid 3px;
+}

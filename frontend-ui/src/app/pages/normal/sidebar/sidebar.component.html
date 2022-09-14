@@ -1,0 +1,26 @@
+
+<mat-card>
+      <mat-card-title>Available Categories</mat-card-title>
+
+      <mat-action-list>
+            <button mat-list-item routerLink="/user-dashboard/0">
+                  <mat-icon mat-list-icon>question_answer</mat-icon> 
+                  All Quiz
+            </button>
+
+            <button mat-list-item *ngFor="let c of categories" [routerLink]="'/user-dashboard/' + c.cid">
+                  <mat-icon mat-list-icon>question_answer</mat-icon> 
+                  {{ c.title }}
+            </button>
+            
+            <button mat-list-item  routerLink="/user-dashboard/profile">
+                  <mat-icon mat-list-icon>account_circle</mat-icon>
+                  PROFILE
+            </button>
+            
+            <button mat-list-item  (click)="logout()" *ngIf="isLoggedIn">
+                  <mat-icon mat-list-icon>logout</mat-icon>
+                  LOGOUT
+            </button>
+      </mat-action-list>
+</mat-card>

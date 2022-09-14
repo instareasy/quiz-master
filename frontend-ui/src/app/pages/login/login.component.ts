@@ -61,11 +61,9 @@ export class LoginComponent implements OnInit {
           // redirect... ADMIN: admin-dashboard
           // redirect... NORMAL: normal-dashboard
           if (this.loginService.getUserRole() == 'ADMIN') {
-            //window.location.href='/admin';
             this.router.navigate(['admin']);
             this.loginService.loginStatusSubject.next(true);
           } else if (this.loginService.getUserRole() == 'NORMAL') {
-            // window.location.href = '/user-dashboard';
             this.router.navigate(['user-dashboard/0']);
             this.loginService.loginStatusSubject.next(true);
           } else {
@@ -74,9 +72,8 @@ export class LoginComponent implements OnInit {
         });
       },
       (error) => {
-        console.log('error');
         console.log(error);
-        this.snack.open('Invalid Credentials provided ! Try again.', '', {
+        this.snack.open(error.error.message || error.name, '', {
           duration: 3000,
         });
       }

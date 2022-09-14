@@ -27,6 +27,7 @@ export class NavbarComponent implements OnInit {
       (data) => {
         this.isLoggedIn = this.loginService.isLoggedIn();
         this.user = this.loginService.getUser();
+        console.log(this.user);
       });
   }
 
@@ -34,4 +35,12 @@ export class NavbarComponent implements OnInit {
     this.loginService.logout();
     window.location.reload();
   }
+
+  public isAdmin() {
+    if(this.user.authorities[0].authority == 'ADMIN') 
+      return true;
+    else
+      return false;
+  }
+
 }

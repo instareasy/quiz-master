@@ -19,8 +19,12 @@
             LOGOUT
       </a>
 
-      <button *ngIf="isLoggedIn && user" mat-icon-button class="favourite-icon ml20" mat-button [routerLink]="'/admin/profile'">
-            {{ user.username }}
+      <button *ngIf="isLoggedIn && user && isAdmin()" mat-icon-button class="favourite-icon ml20" mat-button [routerLink]="'/admin'">
+            {{ user.username }} 
       </button>
 
+      <button *ngIf="isLoggedIn && user && !isAdmin()" mat-icon-button class="favourite-icon ml20" mat-button [routerLink]="'/user-dashboard/0'">
+            {{ user.username }} 
+      </button>
+      
 </mat-toolbar>

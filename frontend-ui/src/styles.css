@@ -9,6 +9,9 @@ body {
 body {
       margin: 0;
       font-family: Roboto, "Helvetica Neue", sans-serif;
+      background-image: url('./assets/home2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
 .full-width {

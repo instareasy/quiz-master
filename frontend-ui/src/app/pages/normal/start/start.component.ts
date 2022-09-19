@@ -34,8 +34,6 @@ export class StartComponent implements OnInit {
     this.qId = this._route.snapshot.params['qid'];    
     this.loadQuestions();
     this.user = this._login.getUser();
-    console.log(this.qId);
-    console.log(this.user);
   }
 
 
@@ -49,8 +47,6 @@ export class StartComponent implements OnInit {
         this.questions.forEach((q: any) => {
           q['givenAnswer'] = '';
         });
-
-        console.log(this.questions);
         this.startTimer();
        },
       (error: any) => { 

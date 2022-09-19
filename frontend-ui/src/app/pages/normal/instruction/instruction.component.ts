@@ -29,15 +29,14 @@ export class InstructionComponent implements OnInit {
 
   ngOnInit(): void {
     this.qid = this._route.snapshot.params['qid'];
-    console.log(this.qid);
 
     this._quiz.getQuiz(this.qid).subscribe(
       (data: any) => {
         this.quiz = data;
-        console.log(this.quiz);
       },
       (error: any) => {
-        Swal.fire("Error !!", "Error in loading data", 'error');
+        console.log(error);
+        Swal.fire("Error !!", "Error in loading quiz", 'error');
       });
   }
 

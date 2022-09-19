@@ -10,18 +10,18 @@
                             </mat-card-header>
                             
                             <mat-card-content class="ml20">
-                               <h1>{{ quiz.title }}</h1> 
-                               <p>{{ quiz.description }}</p> 
+                               <h1>{{ quiz?.title }}</h1> 
+                               <p>{{ quiz?.description }}</p> 
                                <mat-divider></mat-divider>
                               <br>
                               <h1>Important instruction</h1>
                               <ul>
                                     <li>This quiz is only for practice purpose.</li>
                                     <li>Every question has 4 options. Out of these, only one option is correct</li>
-                                    <li>You have to submit the quiz within {{ quiz.numberOfQuestions * 2 }} minutes.</li>
+                                    <li>You have to submit the quiz within {{ quiz?.numberOfQuestions * 2 }} minutes.</li>
                                     <li>You can attempt the quiz any number of time</li>
-                                    <li>There are {{ quiz.numberOfQuestions }} questions in this quiz.</li>
-                                    <li>Each question carries {{ quiz.maxMarks / quiz.numberOfQuestions }} marks.</li>
+                                    <li>There are {{ quiz?.numberOfQuestions }} questions in this quiz.</li>
+                                    <li>Each question carries {{ quiz?.maxMarks / quiz?.numberOfQuestions }} marks.</li>
                                     <li>No negative marks shall be awarded for wrong answer.</li>
                               </ul> 
                               <mat-divider></mat-divider> <br>

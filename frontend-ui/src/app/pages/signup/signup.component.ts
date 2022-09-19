@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
 
 
   formSubmit() { 
-    console.log(this.user);
+  
     if(this.user.username == '' || this.user.username == null) {
       //alert('User is required !!');
       this.snack.open('Username is required !! ', '', {
@@ -45,14 +45,20 @@ export class SignupComponent implements OnInit {
 
     // addUser: userservice
     this.userService.addUser(this.user).subscribe(
+       // success
       (data: any) => {
-        // success
-        console.log(data);
+       
        //alert('success');
       Swal.fire("Registered !!", "User registration id: "+data.id, 'success');
+      this.user.username='';
+      this.user.password='';
+      this.user.firstName='';
+      this.user.lastName='';
+      this.user.email='';
+      this.user.phone='';
       },
+      // error
       (error) => {
-        // error
         console.log(error);
         // alert('something went wrong');
         this.snack.open(error.error.text,'', {

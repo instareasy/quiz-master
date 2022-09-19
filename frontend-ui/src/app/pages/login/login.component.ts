@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   loginSubmit() {
-    console.log('login btn clicked ');
-
     // username checking
     if (
       this.loginData.username.trim() == '' ||
@@ -50,14 +48,14 @@ export class LoginComponent implements OnInit {
     // request to server to generate token
     this.loginService.generateToken(this.loginData).subscribe(
       (data: any) => {
-        console.log('success');
-        console.log(data);
-
+        console.log('success, Token: ' + data.token);
+        
         // login...
         this.loginService.loginUser(data.token); // sets token in localstorage
+
         this.loginService.getCurrentUser().subscribe((user: any) => {
           this.loginService.setUser(user);
-          console.log(user);
+          
           // redirect... ADMIN: admin-dashboard
           // redirect... NORMAL: normal-dashboard
           if (this.loginService.getUserRole() == 'ADMIN') {

@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
 
         this.loginService.getCurrentUser().subscribe((user: any) => {
           this.loginService.setUser(user);
-          console.log(user);
+         
           // redirect... ADMIN: admin-dashboard
           // redirect... NORMAL: normal-dashboard
           if (this.loginService.getUserRole() == 'ADMIN') {

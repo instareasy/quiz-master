@@ -21,8 +21,6 @@ export class QuizService {
 
   // add quiz to server 
   public addQuiz(quiz: any) {
-    console.log('from Quiz service');
-    console.log(quiz);
     return this._http.post(`${adminUrl}/quiz/`, quiz);
   }
 

@@ -30,11 +30,10 @@ export class AddQuizComponent implements OnInit {
     this._category.categories().subscribe(
       (data: any) => {
         this.categories = data;
-        console.log(this.categories);
       },
       (error) => {
         console.log(error);
-        Swal.fire('Error !!', "Server error", 'error');
+        Swal.fire('Error !!', "Category data not fetched", 'error');
       });
   }
   
@@ -53,8 +52,8 @@ export class AddQuizComponent implements OnInit {
     // call server 
     this._quiz.addQuiz(this.quizData).subscribe(
       (data: any) => {
-        Swal.fire('Success', 'quiz is added successfully', 'success');
-        console.log(data)
+        Swal.fire('Success', 'quiz ' + this.quizData.title + ' is added successfully', 'success');
+        
         this.quizData = {
           title: '',
           description: '',

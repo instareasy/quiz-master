@@ -5,7 +5,7 @@
             <div class="row">
                   <div class="col-md-8 offset-md-2">
 
-                        <form (ngSubmit)="addQuiz()">
+                        <form (ngSubmit)="addQuiz()" ngNativeValidate>
                               <!-- title field -->
                               <mat-form-field class="w100" appearance="fill">
                                     <mat-label>Title</mat-label>
@@ -15,7 +15,7 @@
                               <!-- description field -->
                               <mat-form-field class="w100" appearance="fill">
                                     <mat-label>Description</mat-label>
-                                    <textarea [(ngModel)]="quizData.description" matInput name="description" placeholder="Enter Descriptionhere" required rows="5"></textarea>
+                                    <textarea [(ngModel)]="quizData.description" matInput name="description" placeholder="Enter Description here" required rows="5"></textarea>
                               </mat-form-field>
 
                               <!-- max marks  and number of questions field -->

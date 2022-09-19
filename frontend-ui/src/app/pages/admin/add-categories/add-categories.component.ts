@@ -22,7 +22,14 @@ export class AddCategoriesComponent implements OnInit {
 
   formSubmit() {
     if(this.category.title.trim() == '' || this.category.title == null) {
-      this._snack.open("Title required", '' , {
+      this._snack.open("Field Content Missing: Title required", '' , {
+        duration: 3000,
+      })
+      return;
+    }
+
+    if(this.category.description.trim() == '' || this.category.description == null) {
+      this._snack.open("Field Content Missing: Description required", '' , {
         duration: 3000,
       })
       return;
@@ -31,9 +38,9 @@ export class AddCategoriesComponent implements OnInit {
     // if all correct then
     this._category.addCategory(this.category).subscribe( 
       (data: any) => {
+        Swal.fire('Success!!', 'Category ' + this.category.title + ' is added successfully.', 'success');
         this.category.title = '';
         this.category.description = '';
-        Swal.fire('Success!!', 'Category is added successfully.', 'success');
       },
       (error) => {
         console.log(error);

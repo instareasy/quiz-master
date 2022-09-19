@@ -24,11 +24,7 @@ export class NormalGuard implements CanActivate {
     | boolean
     | UrlTree {
 
-    if (
-      this.loginService.isLoggedIn() &&
-      this.loginService.getUserRole() == 'NORMAL'
-    ) {
-
+    if (this.loginService.isLoggedIn() && this.loginService.getUserRole() == 'NORMAL') {
       return true;
     }
 

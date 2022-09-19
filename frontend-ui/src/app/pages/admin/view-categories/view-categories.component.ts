@@ -18,12 +18,9 @@ export class ViewCategoriesComponent implements OnInit {
   ngOnInit(): void {
     this._category.categories().subscribe(
       (data: any) => {
-        // css
-        this.categories = data;
-        console.log(this.categories);
+        this.categories = data; 
       },
       (error) => {
-        // 
         console.log(error);
         Swal.fire('Error!!', 'error in loading data', 'error');
       }
